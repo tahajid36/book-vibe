@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
     const links = <>
-    <li className="m-3">Home</li>
-    <li className="m-3">About</li>
+    <Link to={'/'}><li className="m-3">Home</li></Link>
+    <Link to={'/about'}><li className="m-3">About</li></Link>
+    <Link to={'/readList'}><li className="m-3">ReadList</li></Link>
     </>
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +43,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn btn-primary">Sign In</a>
       </div>
     </div>
   );
